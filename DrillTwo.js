@@ -42,15 +42,54 @@ function crackingCode(word) {
   }
 }
 
-console.log(crackingCode("craft"));
-console.log(crackingCode("block"));
-console.log(crackingCode("argon"));
-console.log(crackingCode("meter"));
-console.log(crackingCode("bells"));
-console.log(crackingCode("brown"));
-console.log(crackingCode("croon"));
-console.log(crackingCode("droop"));
+console.log(crackingCode('craft'));
+console.log(crackingCode('block'));
+console.log(crackingCode('argon'));
+console.log(crackingCode('meter'));
+console.log(crackingCode('bells'));
+console.log(crackingCode('brown'));
+console.log(crackingCode('croon'));
+console.log(crackingCode('droop'));
 
+
+//Begin How many days in a month
+
+function manyDays(month, leapYear = false) {
+  let result = '';
+
+  switch(month) {
+  case 'January':
+  case 'March':
+  case 'May':
+  case 'July':
+  case 'August':
+  case 'October':
+  case 'December':
+    result = `${month} has 31 days`;
+    break;
+
+  case 'April':
+  case 'June':
+  case 'September':
+  case 'November':
+    result = `${month} has 30 days`;
+    break;
+    
+  case 'February':
+    if (leapYear === true) {
+      result = `${month} has 29 days`;
+    } else {
+      result = `${month} has 28 days`;
+    }
+    break;
+
+  default:
+    result = `Must provide a valid month.`;
+  }
+  return result;
+}
+
+console.log(manyDays('June', false));
 
 
 
