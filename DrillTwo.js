@@ -1,9 +1,15 @@
 'use strict';
+
+//Begin jediName
+
 function jediName (firstName, lastName) {
   return lastName.slice(0,3) + firstName.slice(0,2);
 }
 
 console.log(jediName('Jaye', 'Laguardia'));
+
+
+//Begin To Inifnity and Beyond
 
 function beyond (num) {
   if(num === Infinity) {
