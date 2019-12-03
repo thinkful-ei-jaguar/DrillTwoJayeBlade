@@ -90,7 +90,7 @@ function manyDays(month, leapYear = false) {
     break;
 
   default:
-    result = `Must provide a valid month.`;
+    result = 'Must provide a valid month.';
   }
   return result;
 }
@@ -98,5 +98,38 @@ function manyDays(month, leapYear = false) {
 console.log(manyDays('June', false));
 
 //Begin Rock, Paper, Scissors
+function rockPaperScissors (num) {
+  if (num === 0 || num > 3) {
+    throw new Error('Must choose rock, paper, or scissors!');
+  }
+  const randomNo = Math.floor(Math.random() * 3) + 1;
+  if (randomNo === num) {
+    console.log('It\'s a tie!');
+  }
+  else if (randomNo === 1) {
+    if(num === 2) {
+      console.log('Congrats! Paper beats rock! You win!');
+    }
+    else {
+      console.log('Oh no! Rock beats scissors! Computer Wins!');
+    }
+  }
+  else if (randomNo === 2) {
+    if(num === 3) {
+      console.log('Congrats! Scissors beats paper! You win!');
+    }
+    else {
+      console.log('Oh no! Paper beats rock! Computer Wins!');
+    }
+  }
+  else if (randomNo === 3) {
+    if(num === 1) {
+      console.log('Congrats! Rock beats scissors! You win!');
+    }
+    else {
+      console.log('Oh no! Scissors beats paper! Computer Wins!');
+    }
+  }
+}
 
-test
+rockPaperScissors(2);
