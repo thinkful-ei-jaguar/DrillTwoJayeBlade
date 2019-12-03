@@ -99,3 +99,4 @@ console.log(manyDays('June', false));
 
 //Begin Rock, Paper, Scissors
 
+test
